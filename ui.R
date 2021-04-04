@@ -1,6 +1,6 @@
 
 
-# ui.R
+# ui
 
 library(shiny)
 library(shinythemes)
@@ -38,11 +38,6 @@ shinyUI(fluidPage(theme =  shinytheme("cerulean"),
                                                                            '.text/ tab-separated-values')),
    tags$hr(),
    checkboxInput('header', 'Header', TRUE),
-   radioButtons('sep', 'Separator',
-                c(Comma=',',
-                  Semicolon=';',
-                  Tab='\t'),
-                'Comma'),
    radioButtons('quote', 'Quote',
                 c(None='',
                   'Double Quote'='"',
@@ -60,6 +55,9 @@ shinyUI(fluidPage(theme =  shinytheme("cerulean"),
   
    
    mainPanel(
+      
+     
+   
      tabsetPanel(
        
        tabPanel("Table", tableOutput("table")),
